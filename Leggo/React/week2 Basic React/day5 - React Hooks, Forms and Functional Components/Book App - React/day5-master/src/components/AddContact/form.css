@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.addContact-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-icon {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.save-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.avatar-container {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem 0rem;
+}
+.avatar-container input {
+  display: none;
+}
+.avatar-container label {
+  background-color: yellowgreen;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.error-message {
+  color: crimson;
+}

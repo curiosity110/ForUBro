@@ -1,0 +1,41 @@
+nslookup - find out the corresponding IP address or domain name system (DNS) record example: nslookup sit.academy
+
+ipconfig getifaddr en0 - get information about your local IP address
+
+curl ifconfig.me - get information about your public IP address
+
+curl - download for example website like: curl https://sit.academy/
+
+curl -I - request header information from website: curl -I https://sit.academy/
+
+curl -O -download website, images from web to a file
+
+curl -u usernamel:password download with authentication
+
+Examples of  GET, POST, PATCH and DELETE methods with curl:
+
+curl --data "title=HI&body=Hi sit students" https://jsonplaceholder.typicode.com/posts upload file
+
+curl -X PATCH -H "Content-Type: application/json" -d '{"title" : "new"}' https://jsonplaceholder.typicode.com/posts/10    patch field
+
+curl -X 'DELETE' 'https://jsonplaceholder.typicode.com/posts/1'  delete file
+
+curl https://jsonplaceholder.typicode.com/posts/10 GET post number 10
+
+Linux basic commands:
+
+pwd - print working directory
+ls - list files
+cd - change directory
+touch - create file
+mkdir - create folder
+mv - move, rename file/directory
+cp - copy file/directory   
+
+ssh-keygen - create ssh public and private keygen
+
+ssh root@ip_address - login to digitalocean droplet
+
+systemctl status nginx.service  - check status of nginx
+
+

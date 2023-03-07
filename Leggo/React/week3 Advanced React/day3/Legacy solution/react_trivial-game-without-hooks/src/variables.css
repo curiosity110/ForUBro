@@ -1,0 +1,19 @@
+/* CSS Variables allow you to change the look of your app from a single location */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+:root {
+    /* background-colors */
+    --bg-color-header: #005c71;
+    --bg-color-body: #eefcff;
+    --bg-color-choice-hover: rgb(218, 103, 117);
+
+    /* Other */
+    --height-header: 100px;
+}
+
+/* You can use the css variables in all your components, as long as variables.css is imported in the /src/index.js */
+
+/* How to use them: 
+    background-color: var(--bg-color-header);  
+    height: var(--some-variables-name);
+*/

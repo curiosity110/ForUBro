@@ -1,0 +1,11 @@
+.footer {
+    background: linear-gradient(
+      120deg,
+      rgb(252, 70, 107) 0%,
+      rgb(63, 94, 251) 100%
+    );
+    color: white;
+    height: 80px;
+    padding: 16px;
+    font-size: 24px;
+  }

@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+div {
+    width: 100%;
+    height: 97%;
+}
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3%;
+}
+.films {
+    background-color: #0D0106;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    background-color: #3626A7;
+    height: 100%;
+    color: white;
+}
+.ships  {
+    background-color: #657ED4;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.pilots {
+    background-color: #B2597A;
+    color: white;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.details {
+    background-color: #FF331F;
+    color: white;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.favorites {
+    background-color: #FBFBFF;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+.favo {
+    flex-grow: 0;
+}

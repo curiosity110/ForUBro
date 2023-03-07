@@ -1,0 +1,9 @@
+.Todo {
+  transition: all 300ms ease;
+  cursor: pointer;
+
+  &-completed {
+    opacity: 0.4;
+    margin-left: 1em;
+  }
+}

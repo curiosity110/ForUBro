@@ -1,0 +1,79 @@
+.result-card::before {
+    content: attr(data-order); /* accessing the value of a data attribute in css */
+    position: absolute;
+    top: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    text-align: center;
+    line-height: 1.25rem; /* needs to be the same as height to center content vertically */
+    background-color: #555;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.7rem;
+    border: 1px solid #111;
+    box-shadow: 0 2px 2px 0 rgba(252, 238, 238, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.result-card {
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.result-card-question {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 2px 0 rgba(252, 238, 238, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.result-card-result {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.result-card-choice {
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.result-card-choice::before {
+    content: 'Your Guess: ';
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.result-card-correct-answer {
+    font-size: 0.65rem;
+}
+
+.result-card-correct-answer::before {
+    content: 'correct Answer';
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.65rem;
+}
+
+.result-card .correct {
+    background-color: rgb(78, 153, 78);
+}
+
+.result-card .wrong {
+    background-color: #ff856f;
+}

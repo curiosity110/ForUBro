@@ -1,0 +1,85 @@
+.main-header {
+    background-color: var(--bg-color-header);
+    height: var(--height-header, 100px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: var(--shadow-4dp);
+
+    &-wrapper {
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        width: var(--max-content-width);
+        height: 100%;
+        max-width: 90vw;
+    }
+
+    h1 {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &-btn-cart {
+        cursor: pointer;
+        position: relative;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.25rem;
+        background-color: var(--bg-color-accent);
+        border-radius: var(--radius-small);
+        box-shadow: var(--shadow-1dp);
+
+        &::before {
+            // https://davidwalsh.name/css-content-attr
+            content: attr(data-amount);
+            --size: 1.4rem;
+            top: calc(var(--size) / 2);
+            width: var(--size);
+            height: var(--size);
+            font-size: calc(var(--size) * 0.65);
+            line-height: var(--size);
+            top: calc(var(--size) * -0.5);
+            left: calc(var(--size) * -0.5);
+            box-shadow: var(--shadow-3dp);
+            border-radius: 50%;
+            position: absolute;
+            background-color: black;
+        }
+    }
+}
+
+// A way to change styles for different screen size to make it look nicer
+// A real app should ideally still look presentable for devices with 320px screen width (iPhone 5 for example)
+// If you follow the "Mobile First" approach you would start "the other way around" and style for mobile...
+// ...and only then use media queries to change styles for tablet and desktop (usually using min-width and px as condition).
+// the reason for this is that small devices have less processing power and media queries come with a bit of a cost
+// (Note: here we are NOT using a mobile first approach, this is more of a hotfix done at the end)
+@media (max-width: 600px) {
+    .main-header {
+        height: calc(var(--height-header) * 0.8);
+        h1 {
+            letter-spacing: 0px;
+            font-size: 1.15rem;
+            font-family: 'Arial Narrow', var(--default-font);
+        }
+
+        &-wrapper {
+            max-width: 100%;
+            // padding: 0 0.75rem;
+        }
+
+        &-btn-cart {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.9rem;
+        }
+    }
+}

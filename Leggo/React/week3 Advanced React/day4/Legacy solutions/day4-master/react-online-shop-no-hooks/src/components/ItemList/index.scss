@@ -1,0 +1,21 @@
+.item-list {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 90vw;
+    width: var(--max-content-width);
+}
+
+// A way to change styles for different screen size to make it look nicer
+// A real app should ideally still look presentable for devices with 320px screen width (iPhone 5 for example)
+// If you follow the "Mobile First" approach you would start "the other way around" and style for mobile...
+// ...and only then use media queries to change styles for tablet and desktop (usually using min-width and px as condition).
+// the reason for this is that small devices have less processing power and media queries come with a bit of a cost
+// (Note: here we are NOT using a mobile first approach, this is more of a hotfix done at the end)
+@media (max-width: 600px) {
+    .item-list {
+        max-width: 95vw;
+    }
+}

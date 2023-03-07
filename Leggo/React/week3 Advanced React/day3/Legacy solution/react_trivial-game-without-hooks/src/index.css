@@ -1,0 +1,14 @@
+/* All global styles should go in here */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+    background-color: var(--bg-color-body);
+    font-family: Helvetica, sans-serif;
+    color: var(--color-text);
+}

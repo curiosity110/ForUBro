@@ -1,0 +1,122 @@
+.item-card {
+    // When multiple rules depend on the same value, it makes sense to create a local CSS Variable
+    --margin: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    flex-basis: calc((var(--max-content-width) / 4) - (var(--margin) * 2) - 1px);
+    height: 450px;
+    border-radius: var(--radius-small);
+    overflow: hidden;
+    margin: var(--margin);
+    box-shadow: var(--shadow-1dp);
+    position: relative;
+    transition: box-shadow 0.25s;
+
+    &:hover {
+        box-shadow: var(--shadow-3dp);
+    }
+
+    &-discount::after {
+        content: attr(data-discount-name);
+        display: inline-block;
+        position: absolute;
+        top: 0.2rem;
+        left: 0.2rem;
+        opacity: 0.8;
+        padding: 0rem 0.25rem;
+        color: white;
+        font-weight: 300;
+        background-color: var(--bg-color-accent);
+        border-radius: var(--radius-small);
+        box-shadow: var(--shadow-1dp);
+    }
+
+    &-image {
+        flex-grow: 1;
+        flex-basis: auto;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-footer {
+        padding: 0 0.75rem;
+        padding-top: 0.75rem;
+        text-align: center;
+        border-top: 1px solid #ccc;
+
+        &-title {
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        &-subtitle {
+            font-family: 'Arial Narrow', var(--default-font);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #666;
+
+            // only display first two lines of description, hide rest
+            // it all depends on font-size and line-height
+            --sub-font-size: 1rem;
+            --sub-line-height: 1.2;
+            --sub-max-height: calc(2 * var(--sub-font-size) * var(--sub-line-height));
+            font-size: var(--sub-font-size);
+            max-height: var(--sub-max-height);
+            line-height: var(--sub-line-height);
+            overflow: hidden;
+        }
+
+        &-price-wrap {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        &-price {
+            font-size: 0.9rem;
+            display: inline-block;
+            position: relative;
+
+            // the discounted price (only visible when item has a percentage discount)
+            &.strike {
+                margin-bottom: 0;
+                position: absolute;
+                top: -1rem;
+                left: 50%;
+                transform: translate(-50%);
+                text-decoration: line-through;
+                opacity: 0.5;
+                font-size: 0.8rem;
+            }
+        }
+
+        .btn-add-cart {
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: var(--radius-medium);
+            border: 1px solid var(--bg-color-accent);
+            outline: none;
+            color: var(--bg-color-accent);
+            padding: 0.5rem 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: color 0.25s, background-color 0.25s;
+            &:hover {
+                color: white;
+                background-color: var(--bg-color-accent);
+            }
+        }
+    }
+}

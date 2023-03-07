@@ -1,0 +1,2 @@
+- why is choicefield not validating?
+- better solution for update?

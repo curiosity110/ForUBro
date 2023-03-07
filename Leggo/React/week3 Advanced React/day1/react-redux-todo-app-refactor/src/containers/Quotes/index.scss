@@ -1,0 +1,40 @@
+.Quotes {
+  color: white;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite alternate-reverse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-weight: normal;
+    font-style: italic;
+    margin: 1em 0;
+    max-width: 30rem;
+  }
+
+  button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 0.3em;
+    font-size: 1rem;
+    color: inherit;
+    cursor: pointer;
+    transition: letter-spacing 200ms linear;
+    max-width: 10rem;
+
+    &:hover {
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

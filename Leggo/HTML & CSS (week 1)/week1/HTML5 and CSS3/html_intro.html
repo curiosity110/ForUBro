@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML fundamentals</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>HTML fundamentals</h1>
+      <h2>SIT Academy, Zurich</h2>
+      <h3>HTML stands for Hyper Text Markup Language</h3>
+      <h4>the color #badA55 actually exists</h4>
+      <h5>H5 - the color #badA55 actually exists</h5>
+      <h6>H6 - the color #badA55 actually exists</h6>
+
+      <nav>
+        <a href="https://sit.academy">SIT Academy</a>
+        <a href="css_intro.html">CSS Intro</a>
+        <a href="https://google.com" target="_blank">Google</a>
+        <a href="mailto:contact@html.com?subject=Hello dear"
+          >Send me an email!</a
+        >
+      </nav>
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <main>
+      <!-- PARAGRAPH and basic styles -->
+      <p>
+        <b>This a bold text</b>
+        <i>This is italic</i> <br />
+        <small>This seems to be smaller </small> <br />
+        <del> Delete </del> <br />
+        <mark> Mark</mark> <br />
+      </p>
+
+      <h3>What do you want to learn?</h3>
+      <ul>
+        <li>
+          <div>
+            <h1>Product</h1>
+            <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ul>
+          </div>
+        </li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Let me go home</li>
+      </ul>
+
+      <ol>
+        <li>div's are made to divide the content</li>
+        <li>p's are meant to be used for paragraphs</li>
+        <li>a's link f.e to internal or external pages</li>
+        <li>button's are meant to be pushed</li>
+        <li>h1 is the most important title of a page</li>
+      </ol>
+
+      <!-- INPUTS dont have closing tags. they do not accept any content. -->
+
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 240px;
+          row-gap: 20px;
+          border: 1px solid red;
+        "
+      >
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username here ..." />
+
+        <label> Password </label>
+        <input type="password" placeholder="password here ..." />
+
+        <input type="reset" value="reset" />
+
+        <label> Remember me </label>
+        <input type="checkbox" />
+
+        <input onclick="alert('submitted')" type="submit" value="click" />
+
+        <label>
+          Do you like HTML?
+          <input type="radio" name="answer" value="yes" /> Yes
+          <input type="radio" name="answer" value="no" /> No
+          <input type="radio" name="answer" value="maybe" /> Maybe
+        </label>
+
+        <input type="time" />
+
+        <input type="range" min="20" max="80" step="2" />
+
+        <input type="date" />
+
+        <label
+          >number
+          <input
+            type="number"
+            placeholder="enter a number"
+            min="20"
+            max="40"
+            value="20"
+          />
+        </label>
+
+        <label
+          >Pick a color
+          <input type="color" />
+        </label>
+
+        <!-- give you the error when no @ is included-->
+        <input type="email" placeholder="enter email" />
+
+        <input type="file" />
+
+        <!-- give you error message to enter a URL-->
+        <input type="url" placeholder="enter url" />
+
+        <input type="submit" value="submit form" />
+
+        <select name="Food">
+          <option selected disabled hidden>Choose your favorite cusine</option>
+          <option value="Italian">Italian</option>
+          <option value="Greek">Greek</option>
+          <optgroup label="Peruvian_test">
+            <option>Lomo Saltado</option>
+            <option>Ceviche</option>
+            <option>Aji De Gallina</option>
+          </optgroup>
+        </select>
+      </form>
+
+      <!-- ## Images -->
+      <img
+        src="./images/beach.jpg"
+        width="300"
+        alt="image of a beach from top"
+      />
+      <figcaption>Image from local</figcaption>
+    </main>
+    <aside></aside>
+    <footer>2022 © SIT Academy</footer>
+  </body>
+</html>

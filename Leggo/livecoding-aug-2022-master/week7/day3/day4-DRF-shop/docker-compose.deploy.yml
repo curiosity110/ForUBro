@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  backend:
+    image: registry.gitlab.propulsion-home.ch/adrien-la-boudi/week7day3:latest
+    env_file:
+      - ./envs/prod.env
+    command: "sh /scripts/prod.sh"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    env_file:
+      - ./envs/prod.env
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+
+
+volumes:
+  postgres_db:

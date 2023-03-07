@@ -1,0 +1,18 @@
+.main-header {
+  background-color: var(--bg-color-header);
+  height: var(--height-header);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--bg-color-choice-hover) solid 2px;
+}
+
+.main-header h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}

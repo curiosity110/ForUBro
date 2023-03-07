@@ -1,0 +1,23 @@
+.NewTodo form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 2em;
+}
+
+.NewTodo form input[type='text'] {
+  border: 1px solid black;
+  border-radius: 0;
+  width: 100%;
+  outline: none;
+  font-size: inherit;
+  padding: 0.5em;
+}
+
+.NewTodo form input[type='submit'] {
+  width: 5em;
+}
+/*# sourceMappingURL=index.css.map */

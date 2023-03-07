@@ -1,0 +1,8 @@
+name: DRF-day2
+dependencies:
+  - python=3.10.4
+  - pip=22.2.2
+  - pip:
+      - django==4.1.2
+      - djangorestframework==3.14.0
+      - djangorestframework_simplejwt==5.2.1

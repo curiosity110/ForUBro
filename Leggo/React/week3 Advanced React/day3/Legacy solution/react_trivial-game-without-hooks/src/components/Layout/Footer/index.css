@@ -1,0 +1,12 @@
+.main-footer {
+    height: 50px;
+    background-color: white;
+    margin-top: auto; /* makes sure footer is at the bottom when content is < 100vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-footer .logo {
+    max-height: 100%;
+}

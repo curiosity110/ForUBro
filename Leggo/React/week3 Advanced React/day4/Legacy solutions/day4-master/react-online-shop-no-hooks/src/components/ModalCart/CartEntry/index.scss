@@ -1,0 +1,133 @@
+.cart-entry {
+    // When certain values depend on each other, it makes sense to create local CSS Variables
+    --entry-height: 80px;
+    height: var(--entry-height);
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    border-radius: var(--radius-small);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    box-shadow: var(--shadow-1dp);
+    transition: box-shadow 0.25s;
+
+    &:hover {
+        box-shadow: var(--shadow-2dp);
+    }
+    &-image {
+        padding: calc(var(--entry-height) * 0.1);
+        height: 100%;
+        width: var(--entry-height);
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-small);
+            box-shadow: var(--shadow-1dp);
+        }
+    }
+
+    &-flexwrap {
+        // cart-entry-name and cart-entry-actions are wrapped inside flexwrap
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        flex-grow: 1;
+        padding: 0.5rem;
+    }
+
+    &-name {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &-actions {
+        // btn-increment and btn-decrement are wrapped in here
+        display: flex;
+        flex-flow: row nowrap;
+        // margin: 1rem;
+    }
+
+    &-amount {
+        text-align: center;
+        min-width: 2.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: var(--radius-small);
+        margin: 0 0.5rem;
+        padding: 0.1rem 0.5rem;
+    }
+
+    // &-price {
+    //     margin-right: 1.75rem;
+    // }
+
+    &-price-wrap {
+        margin-right: 1.75rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &-price {
+        font-size: 0.95rem;
+        display: inline-block;
+        position: relative;
+
+        // the discounted price (only visible when item has a percentage discount)
+        &.strike {
+            margin-bottom: 0;
+            position: absolute;
+            top: 1rem;
+            text-decoration: line-through;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 5;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    font-size: 1rem;
+
+    &:hover,
+    &:active {
+        opacity: 0.8;
+    }
+
+    &-delete {
+        margin-right: 1.25rem;
+        font-size: calc(var(--entry-height) * 0.25);
+    }
+}
+
+// A way to change styles for different screen size to make it look nicer
+// A real app should ideally still look presentable for devices with 320px screen width (iPhone 5 for example)
+// If you follow the "Mobile First" approach you would start "the other way around" and style for mobile
+// and only then use media queries to change styles for tablet and desktop (usually using min-width and px as condition).
+// the reason for this is that small devices have less processing power and media queries come with a bit of a cost
+// (Note: here we are NOT using a mobile first approach, this is more of a hotfix done at the end)
+@media (max-width: 600px) {
+    .cart-entry-name,
+    .cart-entry-price {
+        font-size: 0.8rem;
+    }
+    .cart-entry-price {
+        margin-right: 0.5rem;
+    }
+
+    .btn-delete {
+        margin-right: 0.75rem;
+    }
+}

@@ -1,0 +1,33 @@
+.Filter {
+  height: 2em;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  .filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+
+    p {
+      pointer-events: none;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      background-color: rgb(200, 200, 200);
+    }
+
+    &.active {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.home a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background-color: #ef485c;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4em;
+  transition-duration: 200ms;
+}
+
+.home a:hover {
+  transform: translateY(-0.2em);
+}

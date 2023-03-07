@@ -1,0 +1,10 @@
+.layout {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    padding-top: var(--height-header); /* compensate for fixed header */
+}
+
+.layout main {
+    display: inline;
+}

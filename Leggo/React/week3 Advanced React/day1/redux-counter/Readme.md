@@ -1,0 +1,2 @@
+- installation over <script src="https://unpkg.com/@reduxjs/toolkit@1.8.4/dist/redux-toolkit.umd.js"></script>
+- global variable: RTK

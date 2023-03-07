@@ -1,0 +1,104 @@
+.form-signup-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    z-index: 1;
+    top: 150px;
+    left: 400px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 40px;
+    width: 500px;
+    min-width: 300px;
+    border: 2px solid #005C71;
+}
+
+.form-signup-container h1 {
+    color: #005C71;
+    text-align: center;
+    margin-top: 0px; 
+    margin-bottom: 40px;
+}
+
+.form-signup-container h2 {
+    color: #005C71;
+    text-align: center;
+    margin-top: 0px; 
+    margin-bottom: 40px;
+}
+
+.form-signup-container p {
+    text-align: center;
+
+}
+
+.form-signup-container .form-tab {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-signup-container .form-tab input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 10px;
+}
+
+.form-signup-container input.invalid {
+    background-color: #ffdddd;
+}
+
+.form-signup-container .btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.form-signup-container .btn-container button {
+    background-color: #005C71;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+   
+}
+
+.form-signup-container .btn-container button:hover {
+    opacity: 0.8;
+}
+
+.form-signup-container #prev-btn {
+    background-color: #bbbbbb;
+    margin-right: 240px; 
+}
+
+.form-signup-container .steps-container {
+    text-align:center; 
+    margin-top: 30px;
+}
+
+.form-signup-container .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #005C71;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.form-signup-container .step.active {
+    opacity: 1;
+}
+
+.form-signup-container .step.finish {
+    background-color: #5586AB;
+}
+
+.hidden {
+    display: none;  
+}

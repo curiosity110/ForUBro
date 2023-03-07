@@ -1,0 +1,38 @@
+/* this renders a pseudo element that indicates the order of the current question */
+.question-card::before {
+    content: attr(data-order); /* accessing the value of a data attribute in css */
+    position: absolute;
+    top: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem; /* needs to be the same as height to center content vertically */
+    background-color: #555;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.9rem;
+    border: 1px solid #111;
+    box-shadow: 0 2px 2px 0 rgba(252, 238, 238, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.question-card {
+    position: relative;
+    background-color: white;
+    max-width: 90vw;
+    width: 700px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+    margin-top: 3rem;
+    box-shadow: 0 2px 2px 0 rgba(252, 238, 238, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.question-text {
+    padding: 3rem 2rem;
+    font-size: 1.25rem;
+}

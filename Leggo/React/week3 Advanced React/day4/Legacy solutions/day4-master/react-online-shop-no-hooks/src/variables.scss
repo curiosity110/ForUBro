@@ -1,0 +1,38 @@
+/* CSS Variables allow you to change the look of your app from a single location */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+:root {
+    // Background-colors
+    --bg-color-header: #005c71;
+    --bg-color-body: #eefcff;
+    --bg-color-accent: rgb(218, 103, 117);
+
+    // Box-shadow elevation levels (based on material design)
+    --shadow-1dp: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(0, 0, 0, 0.15);
+    --shadow-2dp: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(0, 0, 0, 0.2);
+    --shadow-3dp: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(0, 0, 0, 0.25);
+    --shadow-4dp: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(0, 0, 0, 0.3);
+
+    //for border radius
+    --radius-small: 5px;
+    --radius-medium: 7px;
+    --radius-large: 10px;
+
+    // fonts
+    --default-font: sans-serif;
+
+    // Other
+    --height-header: 80px;
+    --max-content-width: 1300px;
+}
+
+/* You can use the css variables in all your components, as long as variables.css is imported in the /src/index.js */
+
+/* How to use them: 
+    background-color: var(--bg-color-header);  
+    height: var(--some-variables-name);
+*/
